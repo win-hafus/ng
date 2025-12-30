@@ -6,6 +6,44 @@
     box-sizing: border-box;
 }
 
+/* Адаптация для мобильных */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 4rem; /* увеличиваем заголовок */
+    }
+
+    .subtitle {
+        font-size: 1.5rem;
+    }
+
+    .note, .text, .future p, .confession p, .final {
+        font-size: 1.6rem; /* удобочитаемый текст */
+        line-height: 1.8;
+        padding: 0 15px;
+    }
+
+    .characters {
+        font-size: 4rem;
+        gap: 20px;
+    }
+
+    .confession h2 {
+        font-size: 2.8rem;
+    }
+
+    .big {
+        font-size: 1.8rem;
+    }
+
+    .scroll-hint {
+        font-size: 1.1rem;
+    }
+
+    .bg-heart::before {
+        font-size: 16rem; /* сердце не слишком большое для мобильного */
+    }
+}
+
 body {
     font-family: 'EB Garamond', serif;
     background: #0b0b10;
