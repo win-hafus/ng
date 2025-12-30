@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'EB Garamond', serif;
+    background: #0b0b10;
+    color: #f2f2f2;
+    overflow-x: hidden;
+}
+
+/* Screens */
+.screen {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Reveal animation */
+.reveal {
+    opacity: 0;
+    transform:
+        translateY(60px)
+        scale(0.96);
+    filter: blur(6px);
+    transition:
+        opacity 1.2s ease,
+        transform 1.2s ease,
+        filter 1.2s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform:
+        translateY(0)
+        scale(1);
+    filter: blur(0);
+}
+
+.vhs-noise {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 10;
+    background:
+        repeating-radial-gradient(
+            circle,
+            rgba(255,255,255,0.03),
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px,
+            transparent 2px
+        );
+    animation: noiseMove 0.15s infinite;
+}
+
+@keyframes noiseMove {
+    0%   { transform: translate(0,0); }
+    25%  { transform: translate(-1px,1px); }
+    50%  { transform: translate(1px,-1px); }
+    75%  { transform: translate(-1px,-1px); }
+    100% { transform: translate(0,0); }
+}
+
+/* Scanlines */
+.scanlines {
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.03) 1px,
+        transparent 1px,
+        transparent 3px
+    );
+    pointer-events: none;
+    z-index: 9;
+}
+
+/* Text styles */
+h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+.scroll-hint {
+    margin-top: 40px;
+    opacity: 0.6;
+}
+
+.note, .text, .future p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.highlight, .final span {
+    color: #ffd6e0;
+}
+
+.characters {
+    display: flex;
+    gap: 40px;
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.confession h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+}
+
+/* Music button */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    padding: 10px 14px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
+    z-index: 20;
+}
+
+/* Background heart */
+.bg-heart {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1.8s ease, transform 2s ease;
+    z-index: 1;
+}
+
+.bg-heart::before {
+    content: "♡";
+    font-size: 22rem;
+    color: rgba(255, 214, 224, 0.08);
+    text-shadow:
+        0 0 30px rgba(255,214,224,0.15);
+    animation: heartBeat 4s infinite ease-in-out;
+}
+
+.bg-heart.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes heartBeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.04); }
+}
