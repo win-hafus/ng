@@ -7,42 +7,6 @@
 }
 
 /* Адаптация для мобильных */
-@media (max-width: 600px) {
-    h1 {
-        font-size: 8rem; /* увеличиваем заголовок */
-    }
-
-    .subtitle {
-        font-size: 3rem;
-    }
-
-    .note, .text, .future p, .confession p, .final {
-        font-size: 3.2rem; /* удобочитаемый текст */
-        line-height: 1.8;
-        padding: 0 15px;
-    }
-
-    .characters {
-        font-size: 8rem;
-        gap: 20px;
-    }
-
-    .confession h2 {
-        font-size: 5.6rem;
-    }
-
-    .big {
-        font-size: 3.6rem;
-    }
-
-    .scroll-hint {
-        font-size: 2.2rem;
-    }
-
-    .bg-heart::before {
-        font-size: 32rem; /* сердце не слишком большое для мобильного */
-    }
-}
 
 body {
     font-family: 'EB Garamond', serif;
@@ -124,11 +88,12 @@ body {
 
 /* Text styles */
 h1 {
-    font-size: 3rem;
+    font-size: 6rem;
     letter-spacing: 2px;
 }
 
 .subtitle {
+    font-size: 3rem;
     margin-top: 20px;
     opacity: 0.8;
 }
@@ -139,7 +104,7 @@ h1 {
 }
 
 .note, .text, .future p {
-    font-size: 1.3rem;
+    font-size: 2.6rem;
     line-height: 1.6;
     max-width: 600px;
 }
@@ -151,12 +116,12 @@ h1 {
 .characters {
     display: flex;
     gap: 40px;
-    font-size: 3rem;
+    font-size: 6rem;
     margin-bottom: 30px;
 }
 
 .confession h2 {
-    font-size: 2.4rem;
+    font-size: 4.8rem;
     margin-bottom: 20px;
 }
 
@@ -191,7 +156,7 @@ h1 {
 
 .bg-heart::before {
     content: "♡";
-    font-size: 22rem;
+    font-size: 44rem;
     color: rgba(255, 214, 224, 0.08);
     text-shadow:
         0 0 30px rgba(255,214,224,0.15);
@@ -206,4 +171,39 @@ h1 {
 @keyframes heartBeat {
     0%, 100% { transform: scale(1); }
     50% { transform: scale(1.04); }
+}
+
+h1 {
+    font-size: 8rem; /* увеличиваем заголовок */
+}
+
+.subtitle {
+    font-size: 3rem;
+}
+
+.note, .text, .future p, .confession p, .final {
+    font-size: 3.2rem; /* удобочитаемый текст */
+    line-height: 1.8;
+    padding: 0 15px;
+}
+
+.characters {
+    font-size: 8rem;
+    gap: 20px;
+}
+
+.confession h2 {
+    font-size: 5.6rem;
+}
+
+.big {
+    font-size: 3.6rem;
+}
+
+.scroll-hint {
+    font-size: 2.2rem;
+}
+
+.bg-heart::before {
+    font-size: 32rem; /* сердце не слишком большое для мобильного */
 }
