@@ -9,38 +9,38 @@
 /* Адаптация для мобильных */
 @media (max-width: 600px) {
     h1 {
-        font-size: 4rem; /* увеличиваем заголовок */
+        font-size: 8rem; /* увеличиваем заголовок */
     }
 
     .subtitle {
-        font-size: 1.5rem;
+        font-size: 3rem;
     }
 
     .note, .text, .future p, .confession p, .final {
-        font-size: 1.6rem; /* удобочитаемый текст */
+        font-size: 3.2rem; /* удобочитаемый текст */
         line-height: 1.8;
         padding: 0 15px;
     }
 
     .characters {
-        font-size: 4rem;
+        font-size: 8rem;
         gap: 20px;
     }
 
     .confession h2 {
-        font-size: 2.8rem;
+        font-size: 5.6rem;
     }
 
     .big {
-        font-size: 1.8rem;
+        font-size: 3.6rem;
     }
 
     .scroll-hint {
-        font-size: 1.1rem;
+        font-size: 2.2rem;
     }
 
     .bg-heart::before {
-        font-size: 16rem; /* сердце не слишком большое для мобильного */
+        font-size: 32rem; /* сердце не слишком большое для мобильного */
     }
 }
 
